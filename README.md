@@ -3,7 +3,7 @@ A simple bash file to quickly create a Minecraft Java server. More updates comin
 
 ## **How to run it**
 Simply clone it using the git command 
-> git clone https://github.com/r0dri-s/minecraft-server-deploy.git
+> git clone https://github.com/r0dri-s/minecraft-server-deploy.git <
 or just download the file
 Run the file using 
 > ./deploy_server.sh
