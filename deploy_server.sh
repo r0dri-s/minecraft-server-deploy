@@ -1,5 +1,6 @@
 #!/bin/bash
 read -p "enter your server's name: " -e name
+read -p "enter your server's RAM (mb): " -e ram
 mkdir "$name"
 wget "https://drive.google.com/u/1/uc?id=18KBLOHFc82uGAPMNAwpDG4DL8CUAa-1z&export=download" -O "$name"/server.properties -q
 echo "server.properties copied!"
@@ -22,4 +23,5 @@ echo "eula.txt copied!"
 wget "https://drive.google.com/u/1/uc?id=1J1ETSY52SRBCUhX-ErG3jI4J06zg_Cw3&export=download" -O "$name"/server-icon.png -q
 echo "server-icon.png copied!"
 sed -i "s/^motd=.*/motd="$name"/" "$name"/server.properties
+sed -i "s/^-Xmx8192M/-Xmx"$ram"M/" "$name"/server.properties
 echo "Server deployed!"
