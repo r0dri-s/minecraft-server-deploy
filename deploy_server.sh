@@ -1,12 +1,15 @@
 #!/bin/bash
 read -p "enter your server's name: " -e name
 read -p "enter your server's RAM (mb): " -e ram
+read -p "enter your server's version [1.19.3]: " -e version
+version=${version:-1.19.3}
+
 mkdir "$name"
 wget "https://drive.google.com/u/1/uc?id=18KBLOHFc82uGAPMNAwpDG4DL8CUAa-1z&export=download" -O "$name"/server.properties -q
 echo "server.properties copied!"
 wget "https://drive.google.com/u/1/uc?id=1cn7z-oxSDnynRH4f32FoBE7LKekgZ75P&export=download" -O "$name"/run.sh -q
 echo "run.sh copied!"
-wget "https://drive.google.com/u/1/uc?id=1qmWa5_ISk_DOdfj-MWhTfey-_FrkbJEP&export=download" -O "$name"/server.jar -q
+wget "wget https://github.com/r0dri-s/minecraft-server-deploy/blob/main/server_files/paper-"version".jar" -O "$name"/server.jar -q
 echo "server.jar copied!"
 
 read -p "Do you agree with the EULA? (yes/no) " yn
