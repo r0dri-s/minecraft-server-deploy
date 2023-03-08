@@ -9,7 +9,7 @@ wget "https://drive.google.com/u/1/uc?id=18KBLOHFc82uGAPMNAwpDG4DL8CUAa-1z&expor
 echo "server.properties copied!"
 wget "https://drive.google.com/u/1/uc?id=1cn7z-oxSDnynRH4f32FoBE7LKekgZ75P&export=download" -O "$name"/run.sh -q
 echo "run.sh copied!"
-wget "wget https://github.com/r0dri-s/minecraft-server-deploy/blob/main/server_files/paper-"version".jar" -O "$name"/server.jar -q
+wget "wget https://github.com/r0dri-s/minecraft-server-deploy/blob/main/server_files/paper-"$version".jar" -O "$name"/server.jar -q
 echo "server.jar copied!"
 
 read -p "Do you agree with the EULA? (yes/no) " yn
