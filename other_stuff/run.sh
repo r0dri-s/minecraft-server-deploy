@@ -1,2 +1,2 @@
 #!/bin/bash
-java -Xmx8192M -jar paper-1.19.3.jar -nogui
+java -Xmx8192M -jar server.jar -nogui
